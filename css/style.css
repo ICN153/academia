@@ -1,0 +1,283 @@
+:root{
+    --brand: #b91f33;
+    --primary: #101417;
+    --contrast: #e0e34c;
+    --gray-light: #e1e1e1;
+    --gray-medium: #666666;
+    --white: #ffffff;
+    --black: #000000;
+    --rounded: 3px;
+    --section-space: 100px;
+}
+
+/* seletor all//todos */
+*{
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase; /* aplicar maiúsculo aos textos*/
+}
+
+html{
+    scroll-behavior: smooth; /* Faz com que a navegação fique suave */
+}
+
+#academia{
+    scroll-margin-top: 180px;
+}
+#planos{
+scroll-margin-top: 120px;
+}
+#contato{
+scroll-margin-top: 150px;
+}
+
+body{
+    margin: 0;
+    background-color: var(--primary);
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+h2{
+    color: var(--white);
+    font-size: 40px;
+    line-height: 85%;
+}
+
+p{
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--gray-light);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+.container{
+    width: 1140px; /*largura*/  
+    height: auto; /*altura*/
+    /* contraliza a div */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.header{
+    background-color: var(--black);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    /* Posição fixa APÓS começar a rolar a página */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.header .container{ 
+display: flex; /* Habilita o FLEXBOX */
+justify-content: space-between; /* Alinhamento no eixo x (Horizontal)*/
+align-items: center; /* alinhamento no eixo y (Vertical)*/
+}
+/* formatando todos os links do menu */
+.menu a{
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 111px;
+}
+/* Ao passar o mouse nos links do menu */
+.menu a:hover{
+    color: var(--brand);
+}
+
+.hero-section{
+    background-image: url(../img/background.jpg);
+    height: calc(100vh - 100px); /* View HEIGHT -> Unidade referente ao navegador*/
+    background-size: cover; /* Faz com que a imagem cubra toda a div*/
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.hero-section h1{
+    color: var(--gray-light);
+    font-size: 96px;
+    line-height: 90%;
+}
+
+.hero-section p{
+    color: var(--gray-light);
+    font-size: 24px;
+}
+
+.btn{
+    background-color: var(--brand);
+    color: var(--gray-light);
+    font-size: 18px;
+    padding: 10px 60px 6px 60px; /* top right bottom left */ 
+    border-radius: 3px;
+    display: inline-block;
+    transition: calc(0.3s);
+    cursor: pointer;
+    /* cursor: url(..//img/cursor.png) 14 14, pointer; */
+}
+.btn:hover{
+    transform:scale(0.96);
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: solid 2px var(--brand);
+}
+
+.nossa-academia{
+    margin-top: var(--section-space);
+    margin-bottom: var(--section-space);
+    display: flex;
+    align-items: center;
+    column-gap: 24px; /* Espaçamento entre os flex-items */ 
+    
+}
+
+.faca-parte{
+    background-color: var(--gray-light);
+}
+.faca-parte h2{
+    color: var(--black);
+}
+.faca-parte p{
+    color: var(--gray-medium);
+}
+.faca-parte .content{
+    width: 850px;
+    padding: 37px 0;
+}
+
+.faca-parte .container{
+    /* Posição para servir de referncia ao absolute da imagem */
+    position: relative;
+}
+/* Posição em relação ao elemento pai (Desde que ele também tenha position, caso contrário será em relação ao body) */
+.faca-parte .imagem{
+position: absolute;
+bottom: 0;
+right: 0;
+}
+.planos{
+    margin-top: var(--section-space);
+    margin-bottom: var(--section-space);
+    text-align: center;
+}
+
+.flex-cards{
+    display: flex;
+    column-gap: 24px;
+}
+
+.card{
+    border: 1px solid var(--gray-light);
+    border-radius: var(--rounded);
+    padding: 30px;    
+}
+
+.card h3{
+    color: var(--white);
+    font-size: 32px;
+}
+.card ul{
+    color: var(--gray-light);
+    text-align: left;
+    font-size: 18px;
+    line-height: 120%;
+    padding: 0;
+    list-style-position: inside;/* Posição do marcador da lista */
+}
+
+.card .btn{
+    display: block;
+}
+
+.card-destaque{
+    border-color: var(--contrast);
+    position: relative;
+}
+@keyframes rotate {
+
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+.selo{
+    animation: rotate 10s infinite linear;
+    width: 70px;
+    height: 70px;
+    background-color: var(--contrast);
+    border-radius: 35px;
+    align-items: center;
+    display: flex;
+    line-height: 90%;
+    text-align: center;
+    position: absolute;
+    right: -15px;
+    top: -10px;
+
+    
+    
+}
+.card-destaque .price{
+    color: var(--contrast);
+}
+.price{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.fale-conosco{
+    display: flex;
+    column-gap: 24px;
+}
+
+.fale-conosco input, .fale-conosco textarea{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: solid 1px var(--gray-light);
+    border-radius: var(--rounded);
+    padding: 10px;
+    box-sizing: border-box; /* faz com que o padding e border não aumente as dimensões */
+    margin-bottom: 10px;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.fale-conosco textarea{
+    height: 140px;
+}
+
+.fale-conosco ::placeholder{
+    color: var(--gray-medium);
+}
+
+.footer{
+    background-color: var(--brand);
+    text-align: center;
+    padding: 14px 194px;  /* vertical  */
+    margin-top: var(--section-space);
+    margin-bottom: 30px;    
+}
+.footer p{
+    margin: 0;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: var(--section-space);
+}
