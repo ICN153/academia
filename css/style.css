@@ -59,11 +59,13 @@ img{
 }
 
 .container{
-    width: 1140px; /*largura*/  
+    max-width: 1140px; /*largura*/  
     height: auto; /*altura*/
     /* contraliza a div */
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     
 }
 .header{
@@ -150,7 +152,8 @@ align-items: center; /* alinhamento no eixo y (Vertical)*/
     color: var(--gray-medium);
 }
 .faca-parte .content{
-    width: 850px;
+    width: calc(100% - 200px);
+    max-width: 850px;
     padding: 37px 0;
 }
 
@@ -280,4 +283,63 @@ right: 0;
     justify-content: center;
     column-gap: 10px;
     margin-bottom: var(--section-space);
+}
+
+@media (max-width: 1279px){
+
+    h2{
+        font-size: 32px;
+    }
+
+    .card h3{
+        font-size: 24px;
+    }
+    .menu{
+        display: none;
+    }
+
+    .bar{
+        width: 40px;
+        height: 3px;
+        background-color: var(--white);
+        margin-bottom: 3px;
+    }
+
+    .hero-section{
+        /* height: auto;
+        padding-top: 94px;
+        padding-bottom: 94px; */
+        height: 420px;
+        background-position: top center;
+    }
+
+    .hero-section h1{
+        font-size: 36px;
+    }
+
+    .hero-section p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1023px){
+    .nossa-academia{
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .nossa-academia img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px){
+
+    .faca-parte .content{
+        width: 100%;
+    }
+
+    .faca-parte .imagem{
+        display: none;
+    }
 }
