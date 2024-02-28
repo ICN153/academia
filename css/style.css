@@ -308,8 +308,13 @@ right: 0;
         top: 100px;
         display: flex;
         flex-direction: column;
-        transform: translateY(-100vh);
+        transform: translateX(-100%);
+        transition: 0.5s;
 
+    }
+
+    .menu-open{
+        transform: translateX(0);
     }
 
     .menu a{
@@ -329,6 +334,22 @@ right: 0;
         height: 3px;
         background-color: var(--white);
         margin-bottom: 3px;
+        transition: 0.3s;
+    }
+
+    .x .bar:first-child{
+        transform: rotate(45deg) translate(5px,5px);
+        transition-delay: 0.3s;
+    }
+
+    .x .bar:last-child{
+        transform: rotate(-45deg) translate(3px,-3px);
+        transition-delay: 0.3s;
+    }
+
+    .x .bar:nth-child(2){
+        opacity: 0;
+        transform: translateX(-200px);
     }
 
     .hero-section{
