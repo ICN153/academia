@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">
 
+     <!-- Para ligação entre o HTML E O CSS -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css"> <!-- Para ligação entre o HTML E O CSS -->
 </head>
 
@@ -35,7 +38,10 @@
         </div>
     </header>
 
-    <section class="hero-section">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+    <section class="hero-section gp-01 swiper-slide">
         <div class="container">
             <h1>O melhor crossfit da cidade está aqui!</h1>
             <p>Na HardCore, não buscamos apenas treinos; buscamos a força que existe dentro de você. Seja você um atleta
@@ -46,11 +52,38 @@
         </div>
     </section>
 
+    <section class="hero-section gp-02 swiper-slide">
+        <div class="container">
+            <h1>O melhor crossfit da cidade está aqui!</h1>
+            <p>Na HardCore, não buscamos apenas treinos; buscamos a força que existe dentro de você. Seja você um atleta
+                experiente ou um iniciante, nossa academia é o lugar onde a paixão pelo fitness encontra a determinação
+                para superar limites.</p>
+            <!-- target="_blank" -->
+            <a href="https://ge.globo.com/" target="_blank" class="btn">LOREM ipsum</a>
+        </div>
+    </section>
+
+    <section class="hero-section gp-03 swiper-slide">
+        <div class="container">
+            <h1>O melhor crossfit da cidade está aqui!</h1>
+            <p>Na HardCore, não buscamos apenas treinos; buscamos a força que existe dentro de você. Seja você um atleta
+                experiente ou um iniciante, nossa academia é o lugar onde a paixão pelo fitness encontra a determinação
+                para superar limites.</p>
+            <!-- target="_blank" -->
+            <a href="https://ge.globo.com/" target="_blank" class="btn">LOREM ipsum</a>
+        </div>
+    </section>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
     <section class="container nossa-academia" id="academia">
-        <div class="image">
+        <div class="image" data-aos="fade-right" data-aos-duration="500">
             <img src="img/aluna.jpg">
         </div>
-        <div class="content">
+        <div class="content" data-aos="fade-up" data-aos-delay="400" >
             <h2>Nossa academia</h2>
             <p>Na HardCore CrossFit, não estamos aqui apenas para transformar corpos; estamos aqui para transformar
                 vidas. Se você está pronto para abraçar o desafio, superar seus limites e descobrir o seu potencial
@@ -179,8 +212,39 @@
 
 
     </footer>
+
     <!-- Ligação entre HTML E JAVASCRIPT -->
     <script src="js/script.js"></script>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+        AOS.init();
+      </script>
+  
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      loop:true,
+
+      effect: 'coverflow',
+      speed: '1000',
+
+
+      autoplay: {
+        delay: 4000,
+        pauseOnMouseEnter: true,
+      }
+
+    });
+  </script>
+
 
 </body>
 

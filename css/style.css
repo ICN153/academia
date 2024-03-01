@@ -8,6 +8,7 @@
     --black: #000000;
     --rounded: 3px;
     --section-space: 100px;
+    --swiper-navigation-color: var(--brand);
 }
 
 /* seletor all//todos */
@@ -96,14 +97,29 @@ align-items: center; /* alinhamento no eixo y (Vertical)*/
     color: var(--brand);
 }
 
-.hero-section{
+.gp-01{
     background-image: url(../img/background.jpg);
+}
+
+.gp-02{
+    background-image: url(../img/background-2.jpg);
+}
+
+.gp-03{
+    background-image: url(../img/background-3.jpg);
+ 
+}
+
+
+.hero-section{
     height: calc(100vh - 100px); /* View HEIGHT -> Unidade referente ao navegador*/
     background-size: cover; /* Faz com que a imagem cubra toda a div*/
     display: flex;
     align-items: center;
     text-align: center;
 }
+
+
 .hero-section h1{
     color: var(--gray-light);
     font-size: 96px;
