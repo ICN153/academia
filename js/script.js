@@ -5,6 +5,8 @@
 var btnMenu = document.querySelector('.btn-menu');
 var menu = document.querySelector('.menu');
 
+var btnPopup = document.querySelector('.fechar');
+var bgPopup = document.querySelector('.bg-popup')
 //console.log(btnmenu);
 //console.log(menu);
 
@@ -29,4 +31,10 @@ menu.addEventListener('click', function(){
     menu.classList.remove('menu-open');
     menu.classList.remove('x');
 })
+
+    btnPopup.addEventListener('click', function(){
+    //bgPopup.classList.add('bg-popup-none');
+    bgPopup.style.display = 'none' ;
+})
+
 
