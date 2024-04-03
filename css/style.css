@@ -91,7 +91,7 @@ img {
 
 .bg-popup {
   position: fixed;
-  z-index: 100; /* Trazer o elemento para frente */
+  z-index: 3000; /* Trazer o elemento para frente */
   width: 100%;
   height: 100vh;
   display: flex;
